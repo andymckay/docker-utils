@@ -18,7 +18,7 @@ setup(
     author='Andy McKay',
     author_email='andym@mozilla.com',
     license='BSD',
-    install_requires=['docker-compose', 'requests >= 2.5.2'],
+    install_requires=['docker-compose', 'requests >= 2.6.1, < 2.8'],
     packages=find_packages(),
     entry_points={
         'console_scripts': [
