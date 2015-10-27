@@ -4,8 +4,11 @@ python:
 virtualenv:
   system_site_packages: true
 install:
+- pip install mock==1.0.1
+- pip install nose==1.3.7
 - python setup.py develop
-script: nosetests
+- pip freeze
+script: nosetests -s
 deploy:
   provider: pypi
   user: andymckay
@@ -14,9 +17,3 @@ deploy:
     tags: true
   password:
     secure: MDtXAP4/od6wgiyaSycjU8osRHUo95Hn6poRj3n/Z6eHWjLoMG+zqiNsOF5E0lFHHKBvHLXd8kbqUkVa8E4XPXZ5TIMSaRRbJal8R78D7ADaWsQNrWqbpHxOp/IEPCsPbZ8sfv6VgTSQjlkwFs+S9N2glhUADobgf1jtZQ1X8YF9lARuUUgrE/Fad1piAlHChXyQfPb2EghcqPEm3fMlZ8V7qVBOZT+A6kvQfA8vsMmWt+ORV1XvbH3UK5S9JXc7fs9r92XISEoaOqIlAbNmYaG1YHoPPyviC/nzv9NzfJf17wlwlK4s+wmurctdqAg7ElhoGeVIiawgX+1ImgLyS6LgqugJdq5RjSIDpPNxi+FZE2QpDOj++DPFK04uHs05kKrsoufUOKEf0SWH+ncGYe8zy7h6i8WqEEsvk8RGSKIPTtdDgceLgofKStbmVLCcs0asbakNXHT2jvoCqGdO/Buabtk99PNDoSgNJzYj5DqpMxbLyrFWqgitz5T28l/QYGiO3QYN3Veg5tp8YDvJK3zFGKFbhKZdrTU6i3tgUvdxxy+pYPG2BjGR7xQym2LCTTmzJSJnZkil5wfNo/oCsVnaqYkSVic3gPc17NFg6yopV4+rpKHBsNeRxrQGB3D/wvMSHKCOjNW56X1/Lf86qoN3EH8VSDG8CswcvMet2oo=
-notifications:
-  irc:
-    channels:
-    - irc.mozilla.org#payments
-    on_success: change
-    on_failure: always

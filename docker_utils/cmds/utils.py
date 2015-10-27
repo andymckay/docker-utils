@@ -32,6 +32,7 @@ def get_service(project):
 
 
 def get_container(project, service):
+    print project.containers()
     containers = project.containers(service_names=[service])
     if not containers:
         raise NoContainer(service)
