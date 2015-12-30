@@ -8,7 +8,7 @@ allowed_service_commands = [
     'build', 'cap_add', 'cap_drop', 'command',
     'cpu_shares', 'dns', 'dns_search', 'domainname', 'entrypoint', 'env_file',
     'environemnt', 'expose', 'extends', 'external_links', 'hostname', 'image',
-    'links', 'mem_limit', 'net', 'pid', 'post', 'privileged', 'restart',
+    'links', 'mem_limit', 'net', 'pid', 'post', 'ports', 'privileged', 'restart',
     'stdin_open', 'tty', 'user', 'volumes', 'volumes_from', 'working_dir'
 ]
 
